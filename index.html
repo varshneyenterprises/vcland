@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vidhyaarjan Classes | Empowering the Future</title>
+    <link href="https://cdn.jsdelivr.net" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com">
+    <style>
+        :root { --primary-blue: #1a2a6c; --gold: #f2994a; --light-gray: #f8f9fa; }
+        body { font-family: 'Segoe UI', Roboto, sans-serif; color: #333; line-height: 1.6; }
+        
+        /* Hero Section */
+        .hero { background: linear-gradient(rgba(26, 42, 108, 0.9), rgba(26, 42, 108, 0.8)), url('https://images.unsplash.com');
+                background-size: cover; background-position: center; color: white; padding: 100px 0; text-align: center; }
+        .hero h1 { font-size: 3.5rem; font-weight: 700; letter-spacing: 2px; }
+        .hero p { font-size: 1.25rem; font-style: italic; opacity: 0.9; }
+
+        /* About Section */
+        .about-section { padding: 80px 0; background: white; }
+        .section-title { position: relative; margin-bottom: 40px; font-weight: 700; color: var(--primary-blue); }
+        .section-title::after { content: ''; width: 60px; height: 3px; background: var(--gold); position: absolute; bottom: -10px; left: 0; }
+        
+        /* Pillar Cards */
+        .pillar-card { border: none; border-radius: 15px; transition: transform 0.3s; background: var(--light-gray); height: 100%; }
+        .pillar-card:hover { transform: translateY(-10px); box-shadow: 0 10px 30px rgba(0,0,0,0.1); }
+        .icon-box { width: 60px; height: 60px; background: var(--primary-blue); color: white; border-radius: 50%; 
+                    display: flex; align-items: center; justify-content: center; margin-bottom: 20px; font-size: 1.5rem; }
+
+        .stat-box { background: var(--primary-blue); color: white; padding: 40px 0; margin-top: 50px; border-radius: 15px; }
+    </style>
+</head>
+<body>
+
+    <!-- Hero Section -->
+    <header class="hero">
+        <div class="container">
+            <h1>VIDHYAARJAN CLASSES</h1>
+            <p>"To Gain Knowledge"</p>
+            <a href="#contact" class="btn btn-warning btn-lg mt-4 fw-bold">Enroll Now</a>
+        </div>
+    </header>
+
+    <!-- About Section -->
+    <section class="about-section">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6">
+                    <h2 class="section-title">ABOUT US</h2>
+                    <p class="lead"><strong>Vidhyaarjan Classes</strong> is the brainchild of <strong>Er. Dushyant Varshney</strong>.</p>
+                    <p>The name <strong>VIDHYAARJAN</strong> is derived from the Sanskrit words <em>Vidhyaa</em> (Knowledge) and <em>Arjan</em> (To gain); hence the name implies our mission: <strong>To Gain Knowledge</strong>.</p>
+                    <p>Conceived in 2015 and fully operational since 2016, we have dedicated ourselves to delivering true knowledge to the budding future of tomorrow's India.</p>
+                </div>
+                <div class="col-lg-6 text-center">
+                    <div class="stat-box">
+                        <h2 class="display-4 fw-bold">200+</h2>
+                        <p class="mb-0">Students Taught with Excellence</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pillars Section -->
+    <section class="pb-5 bg-light">
+        <div class="container py-5">
+            <h2 class="text-center mb-5 fw-bold" style="color: var(--primary-blue);">Our Three Foundation Pillars</h2>
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <div class="card pillar-card p-4 text-center">
+                        <div class="icon-box mx-auto"><i class="fas fa-heart"></i></div>
+                        <h3>Desire</h3>
+                        <p>Igniting the inner spark to learn and grow beyond boundaries.</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card pillar-card p-4 text-center">
+                        <div class="icon-box mx-auto"><i class="fas fa-brain"></i></div>
+                        <h3>Logic</h3>
+                        <p>Developing a rational mind that questions and understands the 'why' behind the facts.</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card pillar-card p-4 text-center">
+                        <div class="icon-box mx-auto"><i class="fas fa-chart-line"></i></div>
+                        <h3>Analysis</h3>
+                        <p>Building the ability to break down complex problems into simple, solvable steps.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white py-4 text-center">
+        <div class="container">
+            <p class="mb-0">&copy; 2026 Vidhyaarjan Classes. All Rights Reserved.</p>
+            <p class="small text-muted">A unit of Varshney Enterprises</p>
+        </div>
+    </footer>
+
+</body>
+</html>
