@@ -96,33 +96,37 @@
         </div>
     </section>
 
-    <section id="enroll" class="section">
+   <section id="enroll" class="section">
         <div class="reveal">
             <h2>Book a Free Demo Class</h2>
             <div class="form-container">
-                <form action="#">
-                    <div class="form-group"><input type="text" placeholder="Student's Name" required></div>
-                    <div class="form-group"><input type="tel" placeholder="Phone Number" required></div>
+                <form id="demo-form" name="google-sheet">
                     <div class="form-group">
-                        <select>
-                            <option>Select Class</option>
-                            <option>Class 9-10</option>
-                            <option>Class 11-12 (PCM/PCB)</option>
-                            <option>Competitive Exams</option>
+                        <input type="text" name="Name" placeholder="Student's Name" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="tel" name="Phone" placeholder="Phone Number" required>
+                    </div>
+                    <div class="form-group">
+                        <select name="Class">
+                            <option value="">Select Class</option>
+                            <option value="Class 9-10">Class 9-10</option>
+                            <option value="Class 11-12 (PCM/PCB)">Class 11-12 (PCM/PCB)</option>
+                            <option value="Competitive Exams">Competitive Exams</option>
                         </select>
                     </div>
-                    <button type="submit" class="submit-btn">Reserve My Seat</button>
+                    <button type="submit" class="submit-btn" id="submit">Reserve My Seat</button>
                 </form>
             </div>
         </div>
     </section>
 
     <footer>
-        <p>© 2026 Vidhyaarjan Classes | A unit of Varshney Enterprises</p>
+        <p>&copy; 2026 Vidhyaarjan Classes | A unit of Varshney Enterprises</p>
     </footer>
 
     <script>
-        // Scroll Reveal Logic
+        // Scroll Reveal Logic (from the original code)
         function reveal() {
             var reveals = document.querySelectorAll(".reveal");
             for (var i = 0; i < reveals.length; i++) {
@@ -136,6 +140,28 @@
         }
         window.addEventListener("scroll", reveal);
         reveal(); // Run on load
+
+        // Google Sheets Form Submission Logic
+        const scriptURL = 'YOUR_GOOGLE_WEB_APP_URL_HERE'; // <--- PASTE YOUR URL HERE
+        const form = document.forms['google-sheet'];
+        const submitButton = document.getElementById('submit');
+
+        form.addEventListener('submit', e => {
+            e.preventDefault();
+            submitButton.innerText = "Sending...";
+            
+            fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+                .then(response => {
+                    alert("Success! We will contact you shortly.");
+                    form.reset();
+                    submitButton.innerText = "Reserve My Seat";
+                })
+                .catch(error => {
+                    console.error('Error!', error.message);
+                    alert("There was an error submitting the form. Please try again.");
+                    submitButton.innerText = "Reserve My Seat";
+                });
+        });
     </script>
 </body>
 </html>
